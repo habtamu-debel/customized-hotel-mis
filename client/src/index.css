@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: #1c2b4a;
+  background: #c5daf0;
+  font-family: Manrope, sans-serif;
+}
+
+button, input, select, textarea { font-family: inherit; }
+
+.display {
+  font-family: Fraunces, serif;
+  font-optical-sizing: auto;
+  letter-spacing: -0.03em;
+}
+
+.print-sheet { display: none; }
+
+@media print {
+  body { background: white; }
+  .no-print { display: none !important; }
+  .print-sheet {
+    display: block !important;
+    position: static;
+    color: #1c2b4a;
+  }
+}
